@@ -1,0 +1,11 @@
+INSERT INTO category (description) VALUES ('Burrito');
+INSERT INTO category (description) VALUES ('Sushi');
+INSERT INTO category (description) VALUES ('Pizza');
+INSERT INTO category (description) VALUES ('Taco');
+INSERT INTO category (description) VALUES ('Vegetables');
+INSERT INTO unit_of_measure (uom) VALUES ('Milliliter');
+INSERT INTO unit_of_measure (uom) VALUES ('Liter');
+INSERT INTO unit_of_measure (uom) VALUES ('Pinch');
+INSERT INTO unit_of_measure (uom) VALUES ('Count');
+INSERT INTO unit_of_measure (uom) VALUES ('Tablespoon');
+INSERT INTO unit_of_measure (uom) VALUES ('Cup');
