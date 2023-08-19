@@ -9,6 +9,7 @@ import guru.springframework.services.RecipeService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+import javax.transaction.Transactional;
 import java.math.BigDecimal;
 import java.util.HashSet;
 
@@ -26,6 +27,7 @@ public class DataLoader implements CommandLineRunner {
     }
 
     @Override
+    @Transactional
     public void run(String... args) throws Exception {
 
         // i chose a different recipe than the one given on the course.
@@ -71,7 +73,8 @@ public class DataLoader implements CommandLineRunner {
         finelyChoppedCilantro.setDescription("Finely chopped cilantro");
         cajunSpiceGrilledCorn.getIngredients().add(finelyChoppedCilantro);
 
-        cajunSpiceGrilledCorn.setDirections("Preheat the grill to high, making sure the temperature reaches about 550℉.\n" +
+        cajunSpiceGrilledCorn.setDirections("Note, this is an abridged version of the actual recipe.\n" +
+                "Preheat the grill to high, making sure the temperature reaches about 550℉.\n" +
                 "Meanwhile, melt the butter.\n" +
                 "Baste the corn with butter.\n" +
                 "Season the corn.\n" +
