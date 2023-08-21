@@ -6,6 +6,7 @@ import guru.springframework.domain.Recipe;
 import guru.springframework.repositories.CategoryRepository;
 import guru.springframework.repositories.UnitOfMeasureRepository;
 import guru.springframework.services.RecipeService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -13,6 +14,7 @@ import javax.transaction.Transactional;
 import java.math.BigDecimal;
 import java.util.HashSet;
 
+@Slf4j
 @Component
 public class DataLoader implements CommandLineRunner {
 
@@ -29,6 +31,7 @@ public class DataLoader implements CommandLineRunner {
     @Override
     @Transactional
     public void run(String... args) throws Exception {
+        log.debug("Loading bootstrap data");
 
         // i chose a different recipe than the one given on the course.
         // information on the recipe you see here is pulled directly from:
