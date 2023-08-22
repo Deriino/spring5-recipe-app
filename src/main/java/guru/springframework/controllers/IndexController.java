@@ -41,8 +41,13 @@ public class IndexController {
 
         model.addAttribute("recipes", recipes);
 
-        System.out.println("Cat Id is: " + categoryOptional.get().getId());
-        System.out.println("UOM ID is: " + unitOfMeasureOptional.get().getId());
+        if(categoryOptional.isPresent()) {
+            System.out.println("Cat Id is: " + categoryOptional.get().getId());
+        }
+
+        if(unitOfMeasureOptional.isPresent()) {
+            System.out.println("UOM ID is: " + unitOfMeasureOptional.get().getId());
+        }
 
         return "index";
     }
